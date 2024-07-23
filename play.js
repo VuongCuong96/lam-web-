@@ -1,23 +1,27 @@
 const fetchData = () => {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('Done!');
+      resolve("Done!");
     }, 1500);
   });
   return promise;
 };
 
 setTimeout(() => {
-  console.log('Timer is done!');
+  console.log("Timer is done!");
   fetchData()
-    .then(text => {
+    .then((text) => {
       console.log(text);
       return fetchData();
     })
-    .then(text2 => {
+    .then((text2) => {
       console.log(text2);
     });
 }, 2000);
 
-console.log('Hello!');
-console.log('Hi!');
+console.log("Hello!");
+console.log("Hi!");
+
+function consoleLog() {
+  console.log("This chage your text");
+}
